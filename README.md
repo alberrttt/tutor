@@ -1,38 +1,35 @@
-# create-svelte
+# Tutor
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Tutor is a Go-based backend project with a svelte-frontend. It's a chat interface with some agentic processes to help aide with learning or practicing a concept.
 
-## Creating a project
+Prerequisites
+- Go 1.18 or higher
+- Git
+- API keys as required (see Configuration below)
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Getting Started
+Clone the Repository
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+git clone https://github.com/alberrttt/tutor.git
+cd tutor
 ```
+Configuration
 
-## Building
+Create a .env file in the root directory of your project and add any required API keys. Here’s a sample .env file:
 
-To create a production version of your app:
+plaintext
+```
+SAMBANOVA_CLOUD_API_KEY=<your_api_key_here>
+```
+Make sure to replace <your_api_key_here> with your SambaNova Cloud API key.
+
+To start the project, simply run:
 
 ```bash
-npm run build
+go run .
 ```
+This command will compile and run the project, making it ready to handle API requests.
+Usage
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Once the server is running, you can interact with it by sending API requests to the appropriate endpoints. Detailed API documentation will be available in future updates.
